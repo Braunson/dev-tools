@@ -12,8 +12,7 @@ distro is a nice plus.
 ## Build
 
 ```bash
-docker built -t dev-tools .
-ln -s cli /usr/local/bin/dev-tools
+docker built -t dev-tools . && ln -s cli /usr/local/bin/dev-tools
 ```
 
 ## Use
@@ -24,6 +23,7 @@ dev-tools npm install
 dev-tools sass --watch sass:css
 dev-tools composer install
 dev-tools phpunit
+dev-tools bower install
 # ...
 ```
 
