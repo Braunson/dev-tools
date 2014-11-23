@@ -1,6 +1,6 @@
-# Front end tools, containerized
+# Webdev tools, containerized
 
-A Docker container with tools for front-end web development.
+A Docker container with common tools for web development.
 
 ## Why
 
@@ -12,15 +12,18 @@ distro is a nice plus.
 ## Build
 
 ```bash
-docker built -t front-end .
+docker built -t dev-tools .
+ln -s cli /usr/local/bin/dev-tools
 ```
 
 ## Use
 
 ```bash
-./cli gulp
-./cli npm install
-./cli sass --watch sass:css
+dev-tools gulp
+dev-tools npm install
+dev-tools sass --watch sass:css
+dev-tools composer install
+dev-tools phpunit
 # ...
 ```
 
@@ -30,6 +33,8 @@ docker built -t front-end .
 - gulp
 - bower
 - sass
+- composer
+- phpunit
 
 Missing something? Open an issue or make a pull request so we can add it!
 
